@@ -25,7 +25,7 @@ export default function CreateTodoPage() {
 
     return (
         <div className='p-10 min-h-full '>
-            <Link href="/todos" className='text-blue-500 p-5'> &larr; Back to Todos</Link>
+            <Link href="/todos" className='text-blue-800 p-5'> &larr; Back to Todos</Link>
             <p className='text-3xl text-gray-900 font-extrabold p-5'>Create New Todo</p>
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col text-gray-700'>
                 <div className='p-5 flex flex-col'>
@@ -38,8 +38,10 @@ export default function CreateTodoPage() {
                     <textarea className='p-2 border border-gray-300 rounded'{...register("description")} placeholder='Enter todo description' />
                 </div>
                 <div className='p-5'>
-                    <input type="checkbox" {...register("completed")} />
-                    <label className='mx-2'>Mark as completed</label>
+                    <label className=''>
+                        <input type="checkbox" {...register("completed")} className='mx-2'/>
+                        Mark as completed
+                    </label>
                 </div>
                 <div className='p-5 flex space-x-4'>
                     <button type="submit" disabled={createTodoMutation.isPending} className='self-start text-white border rounded bg-linear-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-linear-to-br hover:border-blue-500 hover:border focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5'>Create Todo</button>

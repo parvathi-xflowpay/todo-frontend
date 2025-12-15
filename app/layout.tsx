@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <QueryProvider>
-      <html>
+      <html lang="en">
         <body className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased m-5 border rounded-lg border-gray-400 min-h-[90vh]">
           
           <div className="mx-auto bg-white shadow-xl rounded-lg border-gray-200 border-4 w-full min-h-screen">

@@ -13,7 +13,10 @@ export default async function TodoPage() {
         <div className='p-10 min-h-full'>
             <div className='flex justify-between items-center mb-5'>
                 <p className='text-4xl text-gray-900 font-extrabold'>My Todos</p>
-                <button type='button' className='text-white border rounded bg-linear-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-linear-to-br hover:border-blue-500 hover:border focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5'><Link href="/todos/create">Create New Todo</Link></button>
+                <Link href="/todos/create" className='text-white border rounded bg-linear-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-linear-to-br hover:border-blue-500 hover:border focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5 inline-block'>
+  Create New Todo
+</Link>
+
             </div>
 
             {todoList && (

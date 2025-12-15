@@ -23,8 +23,8 @@ export default function TodoCard({ todo }: TodoCardProps) {
       <p
         className={`mt-2 px-1 py-0.5 inline-block rounded text-sm font-medium ${
           todo.completed
-            ? 'bg-green-100 text-green-600'
-            : 'bg-amber-100 text-amber-600'
+            ? 'bg-green-100 text-green-900'
+            : 'bg-amber-100 text-amber-900'
         }`}
       >
         Status: {todo.completed ? 'Completed' : 'Pending'}
@@ -32,7 +32,7 @@ export default function TodoCard({ todo }: TodoCardProps) {
       <div className="mt-4">
         <Link
           href={`/todos/${todo.id}`}
-          className="text-blue-500 hover:underline hover:text-blue-600 font-medium"
+          className="text-blue-800 hover:underline hover:text-blue-900 font-medium"
         >
           View Details
         </Link>
