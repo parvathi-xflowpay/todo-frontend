@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import QueryProvider from "../providers/QueryProvider";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,12 +25,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <QueryProvider>
+      <html>
+        <body className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased m-5 border rounded-lg border-gray-400 min-h-[90vh]">
+          
+          <div className="mx-auto bg-white shadow-xl rounded-lg border-gray-200 border-4 w-full min-h-screen">
+            <header className="flex flex-row items-center justify-between border-b py-5 w-full border-gray-200 md:w-auto md:order-1 mx-auto p-3 bg-gray-50">
+              <Link href="/" className="text-3xl font-bold text-blue-500">ToDo App</Link>
+              <div>
+                <Link href="/todos" className="text-2xl text-gray-500">Todos</Link>
+              </div>
+            </header>
+            <main>{children}</main>
+          </div>
+        </body>
+      </html>
+    </QueryProvider>
   );
 }

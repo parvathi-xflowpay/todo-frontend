@@ -9,11 +9,18 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@nestjs/graphql": "^13.2.0",
+    "@tanstack/react-query": "^5.90.12",
+    "@tanstack/react-query-devtools": "^5.91.1",
+    "graphql": "^16.12.0",
+    "graphql-request": "^7.3.5",
     "next": "16.0.7",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "react-hook-form": "^7.68.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^6.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
